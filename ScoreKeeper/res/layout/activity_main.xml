@@ -1,0 +1,98 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="25dp" >
+
+        <TextView
+            android:id="@+id/redtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0"
+            android:gravity="center"
+            android:clickable="true"
+            android:onClick="showWinner"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        
+        <TextView
+            android:id="@+id/bluetotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:clickable="true"
+            android:onClick="showWinner"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+       
+    </TableRow>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+         <Button
+             android:id="@+id/red3"
+             android:layout_width="wrap_content"
+             android:layout_height="130dp"
+             android:layout_weight="1.00"
+             android:background="#F00"
+             android:onClick="increaseScore" />
+         
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight=".3" />
+
+        <Button
+            android:id="@+id/blue3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#00F"
+            android:onClick="increaseScore"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+       <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp">
+        
+         <Button
+             android:id="@+id/redMin"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1.00"
+             android:background="#bbb"
+             android:onClick="decreaseScore" 
+             android:text="- 1"/>
+
+		<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_weight=".3" />
+
+        <Button
+            android:id="@+id/blueMin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#bbb"
+            android:onClick="decreaseScore"
+            android:layout_weight="1"
+            android:text="- 1"
+            />
+    </LinearLayout>
+        
+        
+</TableLayout>
